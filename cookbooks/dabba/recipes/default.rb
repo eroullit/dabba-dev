@@ -1,5 +1,5 @@
 # Create needed directories
-directory "/home/vagrant/vcs/git/dabba" do
+directory "/home/vagrant/vcs/git/dabba/build" do
   action :create
   recursive true
 end
