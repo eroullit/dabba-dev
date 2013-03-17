@@ -1,5 +1,5 @@
 # Create needed directories
-directory "/vcs/git/dabba" do
+directory "/home/vagrant/vcs/git/dabba" do
   action :create
   recursive true
 end
@@ -15,6 +15,6 @@ end
 git "dabba" do
   repository "git://github.com/eroullit/dabba.git"
   revision "rpc"
-  destination "/vcs/git/dabba"
+  destination "/home/vagrant/vcs/git/dabba"
   action :checkout
 end
