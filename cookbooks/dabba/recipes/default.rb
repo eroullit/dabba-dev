@@ -1,5 +1,6 @@
 # Create needed directories
 directory "/home/vagrant/vcs/git/dabba/build" do
+  user "vagrant"
   action :create
   recursive true
 end
