@@ -19,3 +19,12 @@ git "dabba" do
   destination "/home/vagrant/vcs/git/dabba"
   action :checkout
 end
+
+bash "compile" do
+  user "vagrant"
+  cwd "/home/vagrant/vcs/git/dabba"
+  code <<-EOH
+  cmake
+  make
+  EOH
+end
