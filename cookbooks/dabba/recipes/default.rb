@@ -9,8 +9,10 @@ end
 git "dabba" do
   repository "git://github.com/eroullit/dabba.git"
   revision "rpc"
-  destination "/home/vagrant/vcs/git/dabba"
+  destination "/home/vagrant/dabba"
   action :checkout
+  action :sync
+end
 end
 
 bash "compile" do
