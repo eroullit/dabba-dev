@@ -13,13 +13,16 @@ git "dabba" do
   action :checkout
   action :sync
 end
+
+# Create directory to enable out-of-source build
+directory "/home/vagrant/dabba/build" do
+  action :create
 end
 
 bash "compile" do
-  user "vagrant"
-  cwd "/home/vagrant/vcs/git/dabba"
+  cwd "/home/vagrant/dabba/build"
   code <<-EOH
-  cmake
+  cmake ..
   make
   EOH
 end
