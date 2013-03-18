@@ -1,3 +1,12 @@
+execute "update package index" do
+  command "apt-get -y update"
+  ignore_failure true
+end
+
+execute "upgrade packages" do
+  command "apt-get -y upgrade"
+end
+
 # Install dependencies
 %w{build-essential git cmake python-yaml indent libprotobuf-c0-dev protobuf-c-compiler libnl-3-dev libnl-genl-3-dev libnl-route-3-dev libcap2-bin}.each do |pkg|
   package pkg do
