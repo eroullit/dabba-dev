@@ -1,10 +1,3 @@
-# Create needed directories
-directory "/home/vagrant/vcs/git/dabba/build" do
-  user "vagrant"
-  action :create
-  recursive true
-end
-
 # Install dependencies
 %w{build-essential git cmake python-yaml libprotobuf-c0-dev protobuf-c-compiler libnl-3-dev libnl-genl-3-dev libnl-route-3-dev libcap2-bin}.each do |pkg|
   package pkg do
