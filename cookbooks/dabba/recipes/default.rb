@@ -1,8 +1,3 @@
-# non interactive install. Force newer configuration. Fix broken dependency
-execute "upgrade packages w/o interaction" do
-  command "env DEBIAN_FRONTEND=noninteractive apt-get -fuy -o Dpkg::Options::='--force-confnew' upgrade"
-end
-
 # Install dependencies
 %w{build-essential git cmake python-yaml indent libprotobuf-c0-dev protobuf-c-compiler libnl-3-dev libnl-genl-3-dev libnl-route-3-dev libcap2-bin}.each do |pkg|
   package pkg
