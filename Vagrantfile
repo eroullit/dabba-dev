@@ -6,6 +6,7 @@ Vagrant::Config.run do |config|
     config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
     config.vm.provision :chef_solo do |chef|
+        chef.add_recipe "apt"
         chef.add_recipe "dabba"
     end
 end
