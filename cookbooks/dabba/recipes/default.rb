@@ -1,8 +1,3 @@
-execute "update package index" do
-  command "apt-get -y update"
-  ignore_failure true
-end
-
 # non interactive install. Force newer configuration. Fix broken dependency
 execute "upgrade packages w/o interaction" do
   command "env DEBIAN_FRONTEND=noninteractive apt-get -fuy -o Dpkg::Options::='--force-confnew' upgrade"
