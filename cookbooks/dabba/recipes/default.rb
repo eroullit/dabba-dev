@@ -6,7 +6,7 @@ end
 # Clone project sources
 git "dabba" do
   repository "git://github.com/eroullit/dabba.git"
-  revision "rpc"
+  revision "master"
   destination "/home/vagrant/dabba"
   action :checkout
   action :sync
