@@ -1,6 +1,21 @@
-# Install dependencies
-%w{build-essential git cmake clang python-yaml indent libprotobuf-c0-dev protobuf-c-compiler libnl-3-dev libnl-genl-3-dev libnl-route-3-dev libcap2-bin rpm devscripts}.each do |pkg|
-  package pkg
+# Install dabba dependencies
+dabba_deps = %w{libprotobuf-c0-dev protobuf-c-compiler libnl-3-dev libnl-genl-3-dev libnl-route-3-dev libcap2-bin}
+
+# Install dabba optional packages
+dabba_opt_deps = %w{python-yaml}
+
+# Install build packages
+build_deps = %w{build-essential git cmake clang rpm dpkg-dev}
+
+# Install extra packages
+extra_pkgs = %w{indent devscripts}
+
+[dabba_deps, dabba_opt_deps, build_deps, extra_pkgs].each do |pkg_list|
+  pkg_list.each do |pkg|
+    package pkg do
+      action :install
+    end
+  end
 end
 
 # Clone project sources
