@@ -20,6 +20,8 @@ end
 
 # Clone project sources
 git "dabba" do
+  user "vagrant"
+  group "vagrant"
   repository "git://github.com/eroullit/dabba.git"
   revision "master"
   destination "/home/vagrant/dabba"
@@ -30,9 +32,13 @@ end
 # Create directory to enable out-of-source build
 directory "/home/vagrant/dabba/build" do
   action :create
+  user "vagrant"
+  group "vagrant"
 end
 
 bash "compile" do
+  user "vagrant"
+  group "vagrant"
   cwd "/home/vagrant/dabba/build"
   code <<-EOH
   cmake ..
