@@ -8,7 +8,7 @@ dabba_opt_deps = %w{python-yaml}
 build_deps = %w{build-essential git cmake clang rpm dpkg-dev}
 
 # Install extra packages
-extra_pkgs = %w{indent devscripts vim}
+extra_pkgs = %w{indent devscripts vim tig}
 
 [dabba_deps, dabba_opt_deps, build_deps, extra_pkgs].each do |pkg_list|
   pkg_list.each do |pkg|
