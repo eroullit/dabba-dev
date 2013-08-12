@@ -7,6 +7,7 @@ Vagrant::Config.run do |config|
 
     config.vm.provision :chef_solo do |chef|
         chef.add_recipe "apt"
+        chef.add_recipe "dev-env"
         chef.add_recipe "dabba"
     end
 end
