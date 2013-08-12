@@ -5,7 +5,7 @@ dev_deps = %w{build-essential git cmake clang}
 pack_deps = %w{rpm dpkg-dev}
 
 # Install extra packages
-extra_pkgs = %w{indent devscripts vim tig}
+extra_pkgs = %w{indent devscripts vim tig tmux}
 
 [dev_deps, pack_deps, extra_pkgs].each do |pkg_list|
   pkg_list.each do |pkg|
