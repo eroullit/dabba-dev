@@ -31,4 +31,5 @@ execute "install dotfiles" do
   group "vagrant"
   cwd "/home/vagrant/dotfiles"
   command "./install.sh"
+  environment 'HOME' => "/home/vagrant"
 end
