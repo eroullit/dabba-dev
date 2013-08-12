@@ -19,7 +19,7 @@ end
 git "dabba" do
   user "vagrant"
   group "vagrant"
-  repository "git://github.com/eroullit/dabba.git"
+  repository "git@github.com:eroullit/dabba.git"
   revision "master"
   destination "/home/vagrant/dabba"
   action :checkout

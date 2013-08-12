@@ -19,7 +19,7 @@ end
 git "clone dotfiles repository" do
   user "vagrant"
   group "vagrant"
-  repository "git://github.com/eroullit/dotfiles.git"
+  repository "git@github.com:eroullit/dotfiles.git"
   revision "master"
   destination "/home/vagrant/dotfiles"
   action :checkout
