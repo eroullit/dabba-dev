@@ -5,12 +5,9 @@ dabba_deps = %w{libprotobuf-c0-dev protobuf-c-compiler libnl-3-dev libnl-genl-3-
 dabba_opt_deps = %w{python-yaml}
 
 # Install build packages
-build_deps = %w{build-essential git cmake clang rpm dpkg-dev}
+build_deps = %w{build-essential git cmake}
 
-# Install extra packages
-extra_pkgs = %w{indent devscripts vim tig}
-
-[dabba_deps, dabba_opt_deps, build_deps, extra_pkgs].each do |pkg_list|
+[dabba_deps, dabba_opt_deps, build_deps].each do |pkg_list|
   pkg_list.each do |pkg|
     package pkg do
       action :install
