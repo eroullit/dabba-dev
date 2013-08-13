@@ -15,6 +15,10 @@ extra_pkgs = %w{indent devscripts vim tig tmux}
   end
 end
 
+execute "do not check github.com host key strictly" do
+  command "echo \"Host github.com\n\tStrictHostKeyChecking no\" >> /home/vagrant/.ssh/config"
+end
+
 # Clone dotfiles repository
 git "clone dotfiles repository" do
   user "vagrant"
