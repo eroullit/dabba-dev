@@ -20,10 +20,8 @@ git "dabba" do
   user "vagrant"
   group "vagrant"
   repository "git@github.com:eroullit/dabba.git"
-  revision "master"
   destination "/home/vagrant/dabba"
   action :checkout
-  action :sync
 end
 
 # Create directory to enable out-of-source build
